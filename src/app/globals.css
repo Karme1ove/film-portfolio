@@ -1,0 +1,76 @@
+/* File: `src/app/globals.css` */
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #dcdcdc;
+  --accent-red: #8a2b2b;
+  --grid-line: rgba(255, 255, 255, 0.08);
+
+  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+/* Reset / base */
+html, body, #__next {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Авто overlay зерна — не требуются внешние файлы */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: 0.06;
+  mix-blend-mode: screen;
+  background-image:
+          radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+          radial-gradient(rgba(0,0,0,0.01) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-repeat: repeat;
+}
+
+/* Заголовки с Playfair Display */
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-serif);
+  color: var(--foreground);
+  line-height: 1.05;
+}
+
+/* Prostokątne surowe linie / grid */
+.grid-frame {
+  border: 2px solid var(--grid-line);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.6) inset;
+}
+
+/* Celowniki w rogach */
+.corner-target { position: relative; }
+.corner-target::before,
+.corner-target::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(220,220,220,0.08);
+}
+.corner-target::before { top: -10px; left: -10px; border-right: none; border-bottom: none; }
+.corner-target::after  { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+
+/* Tailwind utilities */
+@layer utilities {
+  .film-grain { @apply opacity-5; }
+
+  .hover-red { @apply transition-colors duration-300 hover:text-[var(--accent-red)]; }
+}
