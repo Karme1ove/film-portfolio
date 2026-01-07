@@ -25,7 +25,7 @@ export default function GatsbyPage() {
                     </h1>
 
                     <div className="w-full mb-8">
-                        <StalkerPlayer src="https://braslawskifilmy.blob.core.windows.net/video/gatsby.mov" />
+                        <StalkerPlayer src="https://video.gumlet.io/695d823e5ac76cfa7a51c1b6/695d8299bb9129c029e7447b/main.m3u8" />
                     </div>
 
                     <section className="w-full mt-12 md:mt-20 border-t border-white/10 pt-12 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 text-left">
