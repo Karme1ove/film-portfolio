@@ -49,11 +49,18 @@ export default function InfoPage() {
                         </h1>
 
                         <div className="prose prose-invert mb-12 md:mb-16 max-w-none">
-                            <p className="font-serif text-lg text-zinc-400 leading-relaxed text-justify border-l-2 border-red-900/20 pl-6">
-                                Urodzony w Mikołajowie, były muzyk multiinstrumentalista i wioślarz. Swoją przygodę filmową zaczął od pisania scenariuszy, które były zmotywowane wichurą otaczających jego codzienność zdarzeń oraz sytuacji. Obecnie pracuje nad kolejnymi projektami filmowymi, których poziom wizualny oraz merytoryczny stara się podnosić, nie zważając na trudności.
+                            <p>
+                                Kiedyś muzyk i wioślarz. Dziś przekuwam ten rytm i dyscyplinę w obraz.
+                                Urodzony w Mikołajowie, tworzę filmy, bo rzeczywistość dookoła bywa zbyt gęsta,
+                                by jej nie opowiedzieć.
                             </p>
-                            <p className="font-serif text-lg text-zinc-400 leading-relaxed text-justify border-l-2 border-red-900/20 pl-6 mt-6">
-                                Od 2022 roku zrealizował trzy większe projekty: „Gatsby&apos;s Chain”, „Beyond Stars” oraz „Welcome To My World”. Przy każdym projekcie występował w roli reżysera i scenarzysty, a przy „Beyond Stars” zagrał jedną z głównych ról. Tworzy z pasji, dorastając na kinie Kubricka, Scorsese, Finchera i braci Coen. Chce dołożyć coś od siebie do szalonego świata kinematografii, którą kocha całym sercem.
+
+                            <p>
+                                Moje portfolio to na razie cztery rozdziały: „Gatsby's Chain”, „Beyond Stars”,
+                                „Welcome To My World” i „Obciążeni Złem”. Reżyseruję, piszę, czasem staję przed kamerą.
+                                Nie szukam łatwych rozwiązań, lecz kadrów, które na długo zapadną w pamięć.
+                                Inspiruję się mistrzami takimi jak Coppola, Tarkowski, Kubrick i Fincher.
+                                Robię to, bo po prostu muszę.
                             </p>
                         </div>
 
