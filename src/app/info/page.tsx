@@ -4,10 +4,9 @@ import Image from 'next/image';
 
 export default function InfoPage() {
     return (
-        // ZMIANA TUTAJ: Zwiększono pb-20 na pb-40, żeby treść nie chowała się pod paskiem mobilnym
         <main className="min-h-screen w-full bg-[#050505] text-[#dcdcdc] relative selection:bg-red-900/30 pb-40 lg:pb-0">
 
-            {/* LEWY PASEK (POPRAWIONY - SYMETRYCZNY) */}
+            {/* LEWY PASEK (DESKTOP) */}
             <aside className="fixed top-0 left-0 w-[80px] h-full hidden lg:flex flex-col justify-between items-center py-12 border-r border-white/10 z-40 bg-[#050505]">
                 <div className="rotate-90 origin-center whitespace-nowrap text-[10px] tracking-[0.2em] opacity-60 font-mono mt-12">
                     PORTFOLIO
@@ -15,8 +14,7 @@ export default function InfoPage() {
                 <div className="font-mono text-xs opacity-60">2026</div>
             </aside>
 
-            {/* ŚRODKOWA KOLUMNA (SCROLLABLE) */}
-            {/* ZMIANA: Dodano px-4 dla mobile, żeby tekst nie dotykał krawędzi ekranu */}
+            {/* ŚRODKOWA KOLUMNA */}
             <div className="relative flex flex-col items-center justify-start px-4 py-12 md:p-12 min-h-screen lg:mx-[80px]">
                 <NoiseOverlay />
 
@@ -48,18 +46,18 @@ export default function InfoPage() {
                             Sergiusz<br/>Brasławski
                         </h1>
 
-                        <div className="prose prose-invert mb-12 md:mb-16 max-w-none">
-                            <p>
+                        {/* TU BYŁA ZMIANA - PRZYWRÓCONY STYL I TEKST */}
+                        <div className="mb-12 md:mb-16 max-w-none">
+                            <p className="font-serif text-lg text-zinc-400 leading-relaxed text-justify border-l-2 border-red-900/20 pl-6">
                                 Kiedyś muzyk i wioślarz. Dziś przekuwam ten rytm i dyscyplinę w obraz.
                                 Urodzony w Mikołajowie, tworzę filmy, bo rzeczywistość dookoła bywa zbyt gęsta,
                                 by jej nie opowiedzieć.
                             </p>
-
-                            <p>
+                            <p className="font-serif text-lg text-zinc-400 leading-relaxed text-justify border-l-2 border-red-900/20 pl-6 mt-6">
                                 Moje portfolio to na razie cztery rozdziały: „Gatsby's Chain”, „Beyond Stars”,
                                 „Welcome To My World” i „Obciążeni Złem”. Reżyseruję, piszę, czasem staję przed kamerą.
-                                Nie szukam łatwych rozwiązań, lecz kadrów, które na długo zapadną w pamięć.
-                                Inspiruję się mistrzami takimi jak Coppola, Tarkowski, Kubrick i Fincher.
+                                Nie szukam łatwych rozwiązań, tylko kadrów, które mogą pozostać na długo w głowie,
+                                inspirując się mistrzami takimi jak Coppola, Tarkowski, Kubrick i Fincher.
                                 Robię to, bo po prostu muszę.
                             </p>
                         </div>
@@ -72,7 +70,7 @@ export default function InfoPage() {
 
                             <div className="flex flex-col gap-12 font-mono text-xs">
 
-                                {/* 1. OBCIĄŻENI ZŁEM (LINK) */}
+                                {/* 1. OBCIĄŻENI ZŁEM */}
                                 <div className="flex flex-col gap-4">
                                     <Link href="/obciazeni-zlem" className="group w-max">
                                   <span className="text-zinc-200 uppercase tracking-widest border-b border-white/5 pb-2 text-sm group-hover:text-red-700 group-hover:border-red-900 transition-all duration-300">
@@ -101,7 +99,7 @@ export default function InfoPage() {
                                     </ul>
                                 </div>
 
-                                {/* 2. WELCOME TO MY WORLD (LINK) */}
+                                {/* 2. WELCOME TO MY WORLD */}
                                 <div className="flex flex-col gap-4">
                                     <Link href="/welcome-to-my-world" className="group w-max">
                                   <span className="text-zinc-200 uppercase tracking-widest border-b border-white/5 pb-2 text-sm group-hover:text-red-700 group-hover:border-red-900 transition-all duration-300">
@@ -126,7 +124,7 @@ export default function InfoPage() {
                                     </ul>
                                 </div>
 
-                                {/* 3. BEYOND STARS (TEKST) */}
+                                {/* 3. BEYOND STARS */}
                                 <div className="flex flex-col gap-4">
                                     <div className="w-max cursor-default">
                                   <span className="text-zinc-400 uppercase tracking-widest border-b border-white/5 pb-2 text-sm">
@@ -150,7 +148,7 @@ export default function InfoPage() {
                                     </ul>
                                 </div>
 
-                                {/* 4. GATSBY'S CHAIN (LINK) */}
+                                {/* 4. GATSBY'S CHAIN */}
                                 <div className="flex flex-col gap-4">
                                     <Link href="/gatsbys-chain" className="group w-max">
                                   <span className="text-zinc-200 uppercase tracking-widest border-b border-white/5 pb-2 text-sm group-hover:text-red-700 group-hover:border-red-900 transition-all duration-300">
@@ -173,7 +171,7 @@ export default function InfoPage() {
                 </div>
             </div>
 
-            {/* PRAWY PASEK (Desktop Only) */}
+            {/* PRAWY PASEK (DESKTOP) */}
             <aside className="fixed top-0 right-0 w-[80px] h-full hidden lg:flex flex-col justify-between items-center py-12 border-l border-white/10 z-40 bg-[#050505]">
                 <nav className="flex flex-col gap-16 text-[10px] tracking-widest font-mono text-zinc-500 mt-12">
                     <Link href="/" className="rotate-90 hover:text-red-700 cursor-pointer transition-colors whitespace-nowrap origin-center">
