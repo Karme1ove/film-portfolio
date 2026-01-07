@@ -27,7 +27,7 @@ export default function FilmPage() {
 
                     {/* PLAYER */}
                     <div className="w-full mb-8">
-                        <StalkerPlayer src="https://video.gumlet.io/695d823e5ac76cfa7a51c1b6/695d8299a618434ceeb892ce/main.m3u8" />
+                        <StalkerPlayer src="https://video.gumlet.io/695d823e5ac76cfa7a51c1b6/695e3bbb826685545c639105/main.m3u8" />
                     </div>
 
                     {/* SEKCJA INFO */}

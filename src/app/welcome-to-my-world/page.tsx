@@ -25,7 +25,7 @@ export default function WelcomePage() {
                     </h1>
 
                     <div className="w-full mb-8">
-                        <StalkerPlayer src="https://video.gumlet.io/695d823e5ac76cfa7a51c1b6/695d82995ac76cfa7a51cf88/main.m3u8" />
+                        <StalkerPlayer src="https://video.gumlet.io/695d823e5ac76cfa7a51c1b6/695e3bbb826685545c639103/main.m3u8" />
                     </div>
 
                     <section className="w-full mt-12 md:mt-20 border-t border-white/10 pt-12 md:pt-16 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 text-left">
